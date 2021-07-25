@@ -39,7 +39,7 @@ public class PpecommerceApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		repConf.exposeIdsFor(Livre.class,Categorie.class,Review.class);
 		
-		reviewRepository.save(new Review(null,"****"));
+		//reviewRepository.save(new Review(null,"****"));
 		
 		//Categorie cat1 = categorieRepository.save(new Categorie(null,"1","Manga",null));
 		
