@@ -4,15 +4,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-//import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 
 import com.example.dao.CategorieRepository;
 import com.example.dao.LivreRepository;
+import com.example.dao.ReviewRepository;
 import com.example.entities.Categorie;
 import com.example.entities.Livre;
+import com.example.entities.Review;
 
-@SpringBootApplication(scanBasePackages = "com.example.dao")
+@SpringBootApplication
+@EnableJpaRepositories
 public class PpecommerceApplication implements CommandLineRunner {
 	
 	@Autowired(required=true)
@@ -20,6 +23,9 @@ public class PpecommerceApplication implements CommandLineRunner {
 	
 	@Autowired(required=true)
 	private CategorieRepository categorieRepository;
+	
+	@Autowired(required = true)
+	private ReviewRepository reviewRepository;
 	
 	@Autowired
 	private RepositoryRestConfiguration repConf;
@@ -31,8 +37,9 @@ public class PpecommerceApplication implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		repConf.exposeIdsFor(Livre.class,Categorie.class);
+		repConf.exposeIdsFor(Livre.class,Categorie.class,Review.class);
 		
+		reviewRepository.save(new Review(null,"****"));
 		
 		//Categorie cat1 = categorieRepository.save(new Categorie(null,"1","Manga",null));
 		
