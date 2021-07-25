@@ -32,13 +32,16 @@ public class Livre implements Serializable {
 	
 	@ManyToOne
 	private Client client;
+	
+	@ManyToOne
+	private Administrateur administrateur;
 
 	public Livre() {
 		super();
 	}
 
 	public Livre(Long idLivre, String codeLivre, String nomLivre, String designationLivre, double prixLivre,
-			int quantiteLivre, String photoLivre, Categorie categorie, Client client) {
+			int quantiteLivre, String photoLivre, Categorie categorie, Client client, Administrateur administrateur) {
 		super();
 		this.idLivre = idLivre;
 		this.codeLivre = codeLivre;
@@ -49,6 +52,7 @@ public class Livre implements Serializable {
 		this.photoLivre = photoLivre;
 		this.categorie = categorie;
 		this.client = client;
+		this.administrateur = administrateur;
 	}
 
 	public Long getIdLivre() {
@@ -123,8 +127,18 @@ public class Livre implements Serializable {
 		this.client = client;
 	}
 
+	public Administrateur getAdministrateur() {
+		return administrateur;
+	}
+
+	public void setAdministrateur(Administrateur administrateur) {
+		this.administrateur = administrateur;
+	}
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+	
 }
 	
