@@ -8,9 +8,11 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 
 import com.example.dao.CategorieRepository;
+import com.example.dao.ClientRepository;
 import com.example.dao.LivreRepository;
 import com.example.dao.ReviewRepository;
 import com.example.entities.Categorie;
+import com.example.entities.Client;
 import com.example.entities.Livre;
 import com.example.entities.Review;
 
@@ -25,6 +27,9 @@ public class PpecommerceApplication implements CommandLineRunner {
 	private CategorieRepository categorieRepository;
 	
 	@Autowired(required = true)
+	private ClientRepository clientRepository;
+	
+	@Autowired(required = true)
 	private ReviewRepository reviewRepository;
 	
 	@Autowired
@@ -37,7 +42,9 @@ public class PpecommerceApplication implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		repConf.exposeIdsFor(Livre.class,Categorie.class,Review.class);
+		repConf.exposeIdsFor(Livre.class,Categorie.class,Review.class,Client.class);
+		
+		  //clientRepository.save(new Client(null,"Seif Eddin","Khlif","siiif4@gmail.com",21686807,null));
 		
 		//reviewRepository.save(new Review(null,"****"));
 		

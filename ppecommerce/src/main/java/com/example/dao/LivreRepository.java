@@ -17,5 +17,4 @@ import com.example.entities.Livre;
 public interface LivreRepository extends JpaRepository<Livre, Long> {
 	@RestResource(path = "/byDesignationLivre")
 	public List<Livre> findByDesignationLivreContains(@Param("mc") String desLiv);
-
 }
