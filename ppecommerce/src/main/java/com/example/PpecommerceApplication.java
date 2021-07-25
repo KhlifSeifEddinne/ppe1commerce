@@ -34,9 +34,9 @@ public class PpecommerceApplication implements CommandLineRunner {
 		repConf.exposeIdsFor(Livre.class,Categorie.class);
 		
 		
-		Categorie cat1 = categorieRepository.save(new Categorie(null,"1","Manga",null));
+		//Categorie cat1 = categorieRepository.save(new Categorie(null,"1","Manga",null));
 		
-		livreRepository.save(new Livre(null,"1","Death Note","Manga de l'auteur ***",15000,10,"xxx",cat1));
+		//livreRepository.save(new Livre(null,"1","Death Note","Manga de l'auteur ***",15000,10,"xxx",cat1));
 	}
 
 }
