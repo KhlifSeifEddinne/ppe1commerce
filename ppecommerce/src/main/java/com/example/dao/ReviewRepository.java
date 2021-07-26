@@ -14,7 +14,7 @@ import com.example.entities.Review;
 @Service
 @RepositoryRestResource 
 public interface ReviewRepository extends JpaRepository<Review, Long> {
-	@RestResource(path = "/byIdReview") 
+	@RestResource(path = "/byId") 
 	public List<Review> findByIdReviewContains(@Param("mc") Long idR);
   
 }

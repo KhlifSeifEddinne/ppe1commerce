@@ -10,12 +10,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.example.entities.Administrateur;
-import com.example.entities.Livre;
 @CrossOrigin("*")
 @Service
 @RepositoryRestResource
 public interface AdministrateurRepository extends JpaRepository<Administrateur, Long>{
-	@RestResource(path = "/byIdAdministrateur")
-	public List<Livre> findByIdAdministrateurContains(@Param("mc") Long idAdmin);
+	@RestResource(path = "/byNom")
+	public List<Administrateur> findByNomAdministrateurContains(@Param("mc") String Nom);
 
 }

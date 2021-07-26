@@ -15,6 +15,6 @@ import com.example.entities.Categorie;
 @CrossOrigin("*")
 @Service
 public interface CategorieRepository extends JpaRepository<Categorie, Long> {
-	@RestResource(path = "/byDesignationCategorie")
+	@RestResource(path = "/byDesignation")
 	public List<Categorie> findByDesignationCategorieContains(@Param("mc") String desCat);
 }

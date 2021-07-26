@@ -25,6 +25,7 @@ public class Administrateur implements Serializable {
 	private Long idAdministrateur;
 	
 	private String nomAdministrateur;
+	private String motDePasse;
 	
 	@OneToMany(mappedBy = "administrateur")
 	private Collection<Livre> livres;
@@ -33,10 +34,12 @@ public class Administrateur implements Serializable {
 		super();
 	}
 
-	public Administrateur(Long idAdministrateur, String nomAdministrateur, Collection<Livre> livres) {
+	public Administrateur(Long idAdministrateur, String nomAdministrateur, String motDePasse,
+			Collection<Livre> livres) {
 		super();
 		this.idAdministrateur = idAdministrateur;
 		this.nomAdministrateur = nomAdministrateur;
+		this.motDePasse = motDePasse;
 		this.livres = livres;
 	}
 
@@ -56,6 +59,14 @@ public class Administrateur implements Serializable {
 		this.nomAdministrateur = nomAdministrateur;
 	}
 
+	public String getMotDePasse() {
+		return motDePasse;
+	}
+
+	public void setMotDePasse(String motDePasse) {
+		this.motDePasse = motDePasse;
+	}
+
 	public Collection<Livre> getLivres() {
 		return livres;
 	}
@@ -67,7 +78,6 @@ public class Administrateur implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
 	
 	
 

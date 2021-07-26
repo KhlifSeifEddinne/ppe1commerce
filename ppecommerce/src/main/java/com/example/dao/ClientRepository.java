@@ -16,8 +16,8 @@ import com.example.entities.Client;
 @RepositoryRestResource
 @EnableJpaRepositories 
 public interface ClientRepository extends JpaRepository<Client, Long> {
-  @RestResource(path = "/byidClient") 
-  public List<Client> findByidClientContains(@Param("mc") Long idCl);
+  @RestResource(path = "/byNom") 
+  public List<Client> findByidClientContains(@Param("mc") String Nom);
   
   
 }
