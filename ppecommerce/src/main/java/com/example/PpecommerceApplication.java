@@ -48,6 +48,10 @@ public class PpecommerceApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		repConf.exposeIdsFor(Livre.class,Categorie.class,Review.class,Client.class,Administrateur.class);
+		/*repConf.getCorsRegistry()
+		.addMapping("/**")
+		.allowedHeaders("*")
+		.allowedMethods("OPTIONS","HEAD", "GET","PUT","POST","DELETE","PATCH");*/
 		
 		//administrateurRepository.save(new Administrateur(null,"Admin1",null));
 		

@@ -26,17 +26,17 @@ public class Categorie implements Serializable {
 	private String codeCategorie;
 	private String designationCategorie;
 	
-	@OneToMany(mappedBy = "categorie",fetch=FetchType.LAZY)
+	@OneToMany(mappedBy = "categorie",fetch=FetchType.EAGER)
 	private Collection<Livre> livres;
 
 	public Categorie() {
 		super();
 	}
 
-	public Categorie(Long idCategorie, String codeCategoriee, String designationCategorie, Collection<Livre> livres) {
+	public Categorie(Long idCategorie, String codeCategorie, String designationCategorie, Collection<Livre> livres) {
 		super();
 		this.idCategorie = idCategorie;
-		this.codeCategorie = codeCategoriee;
+		this.codeCategorie = codeCategorie;
 		this.designationCategorie = designationCategorie;
 		this.livres = livres;
 	}
@@ -49,12 +49,12 @@ public class Categorie implements Serializable {
 		this.idCategorie = idCategorie;
 	}
 
-	public String getCodeCategoriee() {
+	public String getCodeCategorie() {
 		return codeCategorie;
 	}
 
-	public void setCodeCategoriee(String codeCategoriee) {
-		this.codeCategorie = codeCategoriee;
+	public void setCodeCategorie(String codeCategorie) {
+		this.codeCategorie = codeCategorie;
 	}
 
 	public String getDesignationCategorie() {
