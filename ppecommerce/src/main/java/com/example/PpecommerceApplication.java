@@ -8,11 +8,13 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 
 import com.example.dao.AdministrateurRepository;
+import com.example.dao.AppUserRepository;
 import com.example.dao.CategorieRepository;
 import com.example.dao.ClientRepository;
 import com.example.dao.LivreRepository;
 import com.example.dao.ReviewRepository;
 import com.example.entities.Administrateur;
+import com.example.entities.AppUser;
 import com.example.entities.Categorie;
 import com.example.entities.Client;
 import com.example.entities.Livre;
@@ -35,9 +37,12 @@ public class PpecommerceApplication implements CommandLineRunner {
 	private AdministrateurRepository administrateurRepository;
 	
 	@Autowired(required = true)
+	private AppUserRepository appUserRepository;
+	
+	@Autowired(required = true)
 	private ReviewRepository reviewRepository;
 	
-	@Autowired
+	@Autowired(required = true)
 	private RepositoryRestConfiguration repConf;
 	
 	public static void main(String[] args) {
@@ -52,6 +57,8 @@ public class PpecommerceApplication implements CommandLineRunner {
 		.addMapping("/**")
 		.allowedHeaders("*")
 		.allowedMethods("OPTIONS","HEAD", "GET","PUT","POST","DELETE","PATCH");*/
+		
+		//appUserRepository.save(new AppUser("seif","khlif","sdeksdeksdkk"));
 		
 		//administrateurRepository.save(new Administrateur(null,"Admin1",null));
 		

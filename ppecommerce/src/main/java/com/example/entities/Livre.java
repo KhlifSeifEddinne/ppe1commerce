@@ -34,6 +34,9 @@ public class Livre implements Serializable {
 	private Client client;
 	
 	@ManyToOne
+	private AppUser user;
+	
+	@ManyToOne
 	private Administrateur administrateur;
 
 	public Livre() {
