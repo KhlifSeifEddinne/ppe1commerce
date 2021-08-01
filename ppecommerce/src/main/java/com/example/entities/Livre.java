@@ -42,6 +42,7 @@ public class Livre implements Serializable {
 	public Livre() {
 		super();
 	}
+	
 
 	public Livre(Long idLivre, String codeLivre, String nomLivre, String designationLivre, double prixLivre,
 			int quantiteLivre, String photoLivre, Categorie categorie, Client client, Administrateur administrateur) {

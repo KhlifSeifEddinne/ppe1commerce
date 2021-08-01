@@ -29,6 +29,10 @@ public class Categorie implements Serializable {
 	@OneToMany(mappedBy = "categorie",fetch=FetchType.EAGER)
 	private Collection<Livre> livres;
 
+	public Categorie(Long id_Cat) {
+		this.idCategorie=id_Cat;
+	}
+	
 	public Categorie() {
 		super();
 	}
