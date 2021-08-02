@@ -27,6 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	//	http.httpBasic();
 	//	http.formLogin();
 	//	http.authorizeRequests().antMatchers("/save**/**","/delete**/**").hasRole("ADMIN");
+		//http.authorizeRequests().antMatchers("/delete**/**").hasRole("USER");
 	//	http.authorizeRequests().anyRequest().authenticated();
 		//http.csrf();
 		//}*/

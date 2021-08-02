@@ -58,7 +58,7 @@ public class PpecommerceApplication implements CommandLineRunner {
 		.allowedHeaders("*")
 		.allowedMethods("OPTIONS","HEAD", "GET","PUT","POST","DELETE","PATCH");*/
 		
-		//appUserRepository.save(new AppUser("seif","khlif","sdeksdeksdkk"));
+		//appUserRepository.save(new AppUser("oussema","dridi","oussdrdr"));
 		
 		//administrateurRepository.save(new Administrateur(null,"Admin1",null));
 		
