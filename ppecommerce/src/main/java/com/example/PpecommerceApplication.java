@@ -11,6 +11,7 @@ import com.example.dao.AdministrateurRepository;
 import com.example.dao.AppUserRepository;
 import com.example.dao.CategorieRepository;
 import com.example.dao.ClientRepository;
+import com.example.dao.ImageRepository;
 import com.example.dao.LivreRepository;
 import com.example.dao.ReviewRepository;
 import com.example.entities.Administrateur;
@@ -44,6 +45,9 @@ public class PpecommerceApplication implements CommandLineRunner {
 	
 	@Autowired(required = true)
 	private RepositoryRestConfiguration repConf;
+	
+	@Autowired(required = true)
+	private ImageRepository imageRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(PpecommerceApplication.class, args);
