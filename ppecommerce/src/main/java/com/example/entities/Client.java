@@ -33,6 +33,11 @@ public class Client implements Serializable {
 	public Client() {
 		super();
 	}
+	
+	public Client(Long id_Cl) {
+		  this.idClient=id_Cl; 
+	  }
+	 
 
 	public Client(Long idClient, String nomClient, String prenomClient, String mailClient, int numTelClient,
 			Collection<Livre> livres) {

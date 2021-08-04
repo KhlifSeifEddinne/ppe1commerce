@@ -33,6 +33,11 @@ public class Administrateur implements Serializable {
 	public Administrateur() {
 		super();
 	}
+	
+	public Administrateur(Long id_Adm) {
+		  this.idAdministrateur=id_Adm; 
+	  }
+	 
 
 	public Administrateur(Long idAdministrateur, String nomAdministrateur, String motDePasse,
 			Collection<Livre> livres) {

@@ -45,9 +45,11 @@ public class Categorie implements Serializable {
 		this.designationCategorie = designationCategorie;
 		this.livres = livres;
 	}
-	/*
-	 * public Categorie(Long id_Cat) { this.idCategorie=id_Cat; }
-	 */
+	
+	  public Categorie(Long id_Cat) {
+		  this.idCategorie=id_Cat; 
+	  }
+	 
 
 	public Long getIdCategorie() {
 		return idCategorie;
