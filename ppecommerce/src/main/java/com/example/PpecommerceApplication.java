@@ -62,17 +62,23 @@ public class PpecommerceApplication implements CommandLineRunner {
 		.allowedHeaders("*")
 		.allowedMethods("OPTIONS","HEAD", "GET","PUT","POST","DELETE","PATCH");*/
 		
-		//appUserRepository.save(new AppUser("oussema","dridi","oussdrdr"));
-		
-		//administrateurRepository.save(new Administrateur(null,"Admin1",null));
-		
-		  //clientRepository.save(new Client(null,"Seif Eddin","Khlif","siiif4@gmail.com",21686807,null));
-		
-		//reviewRepository.save(new Review(null,"****"));
-		
-		//Categorie cat1 = categorieRepository.save(new Categorie(null,"1","Manga",null));
-		
-		//livreRepository.save(new Livre(null,"1","Death Note","Manga de l'auteur ***",15000,10,"xxx",cat1));
+		/*
+		 * appUserRepository.save(new AppUser("oussema","dridi","oussdrdr"));
+		 * 
+		 * //administrateurRepository.save(new Administrateur(null,"Admin1",null));
+		 * 
+		 * clientRepository.save(new
+		 * Client(null,"Seif Eddin","Khlif","siiif4@gmail.com",21686807,null));
+		 * 
+		 * reviewRepository.save(new Review(null,"****"));
+		 * 
+		 * Categorie cat1 = categorieRepository.save(new
+		 * Categorie(null,"1","Manga",null));
+		 * 
+		 * livreRepository.save(new
+		 * Livre(null,"1","Death Note","Manga de l'auteur ***",15000,10,"xxx",cat1,null,
+		 * null));
+		 */
 	}
 
 }

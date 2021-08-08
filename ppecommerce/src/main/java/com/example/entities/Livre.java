@@ -2,6 +2,7 @@ package com.example.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,7 +21,9 @@ public class Livre implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idLivre;
+	@Column(unique=true)
 	private String codeLivre;
+	
 	private String nomLivre;
 	private String designationLivre;
 	private double prixLivre;
